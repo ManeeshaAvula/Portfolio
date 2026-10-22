@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Personal Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>AI Ticket Classifier | Maneesha Avula</title>
+  <meta content="AI Ticket Classifier — a full-stack FastAPI + React application that classifies customer support tickets with a scikit-learn model at 96.67% measured test accuracy." name="description">
+  <meta content="Maneesha Avula, AI Ticket Classifier, FastAPI, React, scikit-learn, Machine Learning" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -46,42 +46,54 @@
 
         <div class="row">
 
+          <div class="col-12">
+            <a href="index.html#portfolio" class="back-link">&larr; Back to Portfolio</a>
+          </div>
+
           <div class="col-lg-8">
-            <h2 class="portfolio-title">This is an example of portfolio detail</h2>
+            <h2 class="portfolio-title">AI Ticket Classifier</h2>
 
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+            <div class="project-tile tile-classifier" style="aspect-ratio: 16/9; border-radius: 6px;">
+              <div class="tile-mono">AI</div>
+              <div class="tile-tech">FastAPI · React · scikit-learn</div>
             </div>
+
+            <p style="margin-top: 24px;">
+              A full-stack web application that classifies customer support tickets into five categories —
+              billing, technical support, account access, shipping, and general — and returns a confidence
+              score with every prediction. The React frontend talks to a FastAPI backend; each prediction is
+              stored through SQLAlchemy (SQLite locally, PostgreSQL in production configuration) so the app
+              keeps a browsable classification history and per-category statistics.
+            </p>
+            <p>
+              The model is a scikit-learn pipeline (TF-IDF features + Logistic Regression) trained on a
+              450-ticket labeled dataset included in the repository. On a 90-ticket held-out test set it
+              reached <strong>96.67% measured accuracy</strong>. The codebase is covered by 13 pytest tests
+              and ships with Docker packaging.
+            </p>
 
           </div>
 
           <div class="col-lg-4 portfolio-info">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Category</strong>: Full-Stack Web Application · Machine Learning</li>
+              <li><strong>Stack</strong>: FastAPI, React, scikit-learn (TF-IDF + Logistic Regression)</li>
+              <li><strong>Data</strong>: SQLAlchemy with SQLite / PostgreSQL; 450-ticket labeled dataset</li>
+              <li><strong>Measured accuracy</strong>: 96.67% on a 90-ticket held-out test set</li>
+              <li><strong>Tests</strong>: 13 pytest tests</li>
+              <li><strong>Code</strong>: <a href="https://github.com/ManeeshaAvula/ai-ticket-classifier" target="_blank">github.com/ManeeshaAvula/ai-ticket-classifier</a></li>
             </ul>
 
-            <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-            </p>
+            <ul>
+              <strong>Features:</strong>
+              <ol>Single and batch ticket classification</ol>
+              <ol>Confidence score with every prediction</ol>
+              <ol>Stored classification history</ol>
+              <ol>Per-category statistics endpoint</ol>
+              <ol>Input validation and pytest-covered API</ol>
+            </ul>
+
           </div>
 
         </div>
